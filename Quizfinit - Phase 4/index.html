@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="/Quizfinit - Phase 3/style.css">
+    <link rel="stylesheet" href="/Quizfinit - Phase 4/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Quizfinit - Phase 4/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Quizfinit - Phase 4/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Quizfinit - Phase 4/assets/images/favicon-16x16.png">
 </head>
 <body>
     <header>
@@ -16,6 +19,8 @@
                 <a href="#about" id="abtLink">About</a>
                 <a href="#dashboard" id="dashboardLink">Dashboards</a>
                 <a href="#contact" id="contactLink">Contacts</a>
+                <button class="btn_signup" id="btn_signup">Sign Up</button>
+                <button class="btn_login>Login" id="btn_login">Login</button>
             </nav>
         </div>
     </header>
@@ -31,6 +36,57 @@
                 <button class="card_btn">Play</button>
             </aside>
         </div>
+    </div>
+
+    <!-- Sign Up form -->
+    <div id="signup_form" class="form"> 
+        <div class="form_content">
+            <span class="close_signup">&times;</span>
+            <h2 class="signup_header">Sign Up</h2>
+            <br>
+            <form id="sign_up">
+                <label for="username" class="details">Username</label> <br>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <br>
+                <label for="email" class="details">Email</label><br>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <br>
+                <label for="password" class="details">Password</label><br>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <br>
+                <label for="password" class="details">Confirm Password</label><br>
+                <input type="password" id="password1" name="password" required>
+                <br>
+                <br>
+                <button type="submit_signup" class="signup_submit_form">Sign Up</button>
+            </form>
+        </div>
+    </div>
+<!-- Login form -->
+    <div id="login_form" class="form">
+        <div class="form_content">
+            <span class="close_login">&times;</span>
+            <h2>Login</h2>
+            <br>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label><br>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+                <br>
+                <br>
+                <label for="loginPassword">Password:</label><br>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <br>
+                <br>
+                <button type="submit_login" class="signup_submit_form">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="loggedInContent" style="display: none;">
+        <h1>Welcome Back!</h1>
+        <p>You are logged in.</p>
     </div>
 
     <div class="about_section" id="about">
@@ -80,6 +136,7 @@
             </aside>
         </div>
     </div>
+    
     <div class="contact_section" id="contacts">
         <br>
         <br>
@@ -109,6 +166,6 @@
             </footer>
         </div>
 
-    <script src="/Quizfinit - Phase 3/app.js"></script>
+    <script src="/Quizfinit - Phase 4/app.js"></script>
 </body>
 </html>

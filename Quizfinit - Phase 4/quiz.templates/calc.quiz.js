@@ -1,6 +1,28 @@
+let timeLimit = 10; // Default time limit in minutes
+let timeRemaining = timeLimit * 60; // Convert minutes to seconds
 let currentQuestionIndex = 0; // Track the current question index
 let selectedQuestions = [];
 let userAnswers = {}; // Store the user's answers
+
+
+// Function to start the timer
+function startTimer() {
+    const timerElement = document.getElementById('timerDisplay');
+    
+    const interval = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(interval);
+            alert('Time is up! Submitting your quiz...');
+            submitQuiz();
+        }
+
+        timeRemaining--;
+    }, 1000); // Update every second
+}
 
 // All questions pool
 const allQuestions = [
@@ -126,11 +148,22 @@ const allQuestions = [
     },
 ];
 
-// Function to get a random selection of 10 questions
+// Function to parse URL query parameters
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        // attemptName : parseInt(params.get('attemptName'), 10),
+        noQuestions: parseInt(params.get('noQuestions'), 10),
+        difficulty: params.get('difficulty'),
+        timeLimit: parseInt(params.get('timeLimit'), 10)
+    };
+}
+
+// Function to get a random selection of questions
 function getRandomQuestions(num) {
     // Shuffle the questions
     const shuffled = allQuestions.sort(() => 0.5 - Math.random());
-    // Return only the first `num` questions (10 in this case)
+    // Return only the first `num` questions
     return shuffled.slice(0, num);
 }
 
@@ -173,10 +206,15 @@ function submitQuiz() {
     saveQuizResults(); // Save the quiz results
     const score = checkAnswers(selectedQuestions);
     const confirmation = confirm('Are you sure? Submission is final!');
-    
+
+    const results = {
+        score: score,
+        timeTaken: `${timeLimit - Math.floor(timeRemaining / 60)}:${60 - (timeRemaining % 60)}`
+    };
+   
     if (confirmation) {
-        alert(`You scored ${score} out of ${selectedQuestions.length}.`);
-        window.location.href = '/Quizfinit - Phase 3/results/quiz.results.html';
+        alert(`You scored ${score} out of ${selectedQuestions.length}. Time Taken: ${timeLimit - Math.floor(timeRemaining / 60)}:${60 - (timeRemaining % 60)}`);
+        window.location.href = '/Quizfinit - Phase 4/results/quiz.results.html';
     }
 }
 
@@ -193,7 +231,12 @@ function checkAnswers(questions) {
 
 // Main logic that runs on page load
 document.addEventListener('DOMContentLoaded', function() {
-    selectedQuestions = getRandomQuestions(10); // Get 10 random questions
+    const params = getQueryParams();
+    timeLimit = params.timeLimit || 10; // Set time limit from query params
+    selectedQuestions = getRandomQuestions(params.noQuestions || 10); // Get questions based on settings
+    timeRemaining = timeLimit * 60; // Reset timer with new limit
+
+    startTimer();
     displayQuestion(currentQuestionIndex); // Display the first question
 
     document.getElementById('nextBtn').addEventListener('click', () => {

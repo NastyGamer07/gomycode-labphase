@@ -12,7 +12,7 @@ function getQuizResults() {
         userAnswers = JSON.parse(storedAnswers);
     } else {
         alert('No quiz results found!');
-        window.location.href = '/Quizfinit - Phase 3/quiz.templates/calc.quiz.html';
+        window.location.href = '/Quizfinit - Phase 4/quiz.templates/calc.quiz.html';
     }
 }
 
@@ -107,16 +107,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('retakeBtn').addEventListener('click', () => {
-        const confirmation = confirm('Are you sure? It begins immediately and questions may vary!');
-        if (confirmation) {
-            window.location.href = '/Quizfinit - Phase 3/quiz.templates/calc.quiz.html';
-        }
+            window.location.href = '/Quizfinit - Phase 4/modes/mathematics.html';
+        
     });
 });
 
 
-// <p>${question.text}</p>
-//         <label><input type="radio" name="${question.id}" value="a" ${userAnswers[question.id] === 'a' ? 'checked' : ''} disabled> ${question.options.a}</label><br>
-//         <label><input type="radio" name="${question.id}" value="b" ${userAnswers[question.id] === 'b' ? 'checked' : ''} disabled> ${question.options.b}</label><br>
-//         <label><input type="radio" name="${question.id}" value="c" ${userAnswers[question.id] === 'c' ? 'checked' : ''} disabled> ${question.options.c}</label><br>
-//         <label><input type="radio" name="${question.id}" value="d" ${userAnswers[question.id] === 'd' ? 'checked' : ''} disabled> ${question.options.d}</label>
