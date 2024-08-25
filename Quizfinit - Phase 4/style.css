@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --pry-color: #e2a32fdd;
+    --sec-color: #19074d;
+    --other-color: #2a413c;
+    --white: #fff;
+    --black: #000;
+    --txt-sh: #000 0px 1px 0.5px
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+/* Footer */
+.footer {
+    background: var(--sec-color); 
+    background-size: cover;
+    background-position: center;
+    color: var(--pry-color);
+    z-index: 98;
+    text-align: center;
+    padding: 10px;
+}
+.minlogo {
+    font-size: 32px; 
+    pointer-events: none;
+    color: var(--pry-color); 
+    font-family: 'New Amsterdam';
+    text-shadow: var(--txt-sh);
+    z-index: 99;
+}
+/* Header. Contains logo, navbar and buttons */
+header {
+    background-color: var(--sec-color);
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    position: fixed;
+    z-index: 99;
+    padding: 15px 100px;
+    display: flex;
+    align-items: center;
+    top: 0;
+}
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'New Amsterdam';
+    color: var(--pry-color);
+    letter-spacing: 2px;
+    text-shadow: var(--txt-sh);
+    padding-right: 550px;
+}
+
+/* Navbar. Contain navs and buttons */
+nav {
+    text-align: right;
+    align-items: center;
+    word-spacing: 20px;
+}
+nav a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'New Amsterdam';
+    color: var(--pry-color);   
+    text-shadow: var(--txt-sh);
+    transition: 1s;
+}
+ .navbar a:hover {
+    font-size: 24.5px;
+    font-weight: 470;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-shadow: var(--white) 0px 1px 0.5px;
+    transition: 1s;
+} 
+nav button {
+    border: none;
+    background-color: var(--other-color);
+    border-radius: 20px;
+    width: 72px;
+    height: 40px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 550;
+    transition: 1s;
+ }
+nav button:hover {
+    width: 74px;
+    height: 42px;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: var(--pry-color);
+    color: var(--white);
+    box-shadow: #fff 0px 1px 0.5px;
+    transition: 1s;
+
+ }
+
+ /* Main section */
+ .card_container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    justify-items: center;
+    height: 100vh; 
+    margin-top: 0px;
+}
+.card {
+    border: 7px solid var(--pry-color);
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    padding: 20px;
+    margin: 57px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+    position: relative; 
+    text-align: center;
+    margin-top: 70px; 
+    background-color: var(--sec-color);
+    transition: 1.0s; 
+}
+  .card .card_img{
+    max-width: 80%;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    pointer-events: none;
+    fill: var(--white);
+} 
+  .card .card_title {
+    font-weight: 650;
+    font-family: 'Edu Vic Wa Nt Beginner';
+    color: var(--white)
+}
+  .card .card_description {
+    font-weight: 400;
+    color: var(--white);
+}
+  .card .card_btn {
+    width: 40%;
+    height: 50px;
+    background-color: var(--pry-color);
+    color: var(--white);
+    font-family: 'Edu Vic Wa Nt Beginner';
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border: none;
+    transition: 1s;
+}
+  .card .card_btn:hover {
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: 800;
+    width: 41%;
+    height: 52px;
+    border-radius: 9px;
+    text-shadow: #fff 0px 1px 0.5px;
+}
+/* About section  */
+.about_section {
+    text-align: center;
+}
+.abt_card {
+    border: 5px solid var(--pry-color);
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    padding: 20px;
+    margin: 57px;
+    text-align: center;
+    width: 800px;
+    height: 430px;
+    display: inline-block;
+    position: relative; 
+    text-align: center;
+    margin-top: 70px; 
+    background-color: var(--other-color);
+    color: var(--white);
+    transition: 1.0s; 
+}
+.abt_card_title {
+    font-family: 'New Amsterdam';
+    letter-spacing: 2px;
+    font-size: 70px;
+}
+
+/* Dashboards section */
+.dash_card_container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    justify-items: center;
+    height: 100vh; 
+    margin-top: 0px;
+}
+.dashboards {
+    border: 7px solid var(--pry-color);
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    padding: 20px;
+    margin: 57px;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+    position: relative; 
+    text-align: center;
+    margin-top: 70px; 
+    color: var(--white);
+    background-color: var(--other-color);
+    transition: 1.0s; 
+}
+.dash_title {
+    font-family: 'New Amsterdam';
+    font-size: 70px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--pry-color);
+    text-shadow: var(--black) 0px 1px 0.5px;
+}
+  .empty {
+    color: var(--white);
+}
+
+/* Contacts section */
+.contact_section {
+    text-align: center;
+}
+.contacts_card {
+    border: 5px solid var(--pry-color);
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    padding: 20px;
+    margin: 57px;
+    text-align: center;
+    width: 800px;
+    height: 430px;
+    display: inline-block;
+    position: relative; 
+    text-align: center;
+    margin-top: 70px; 
+    background-color: var(--other-color);
+    color: var(--white);
+    transition: 1.0s; 
+}
+.contact_card_title {
+    font-family: 'New Amsterdam';
+    letter-spacing: 3px;
+    font-size: 70px;
+}
+.contact_p {
+    color: var(--sec-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Calculations category */
+.calc_quiz {
+    display: block; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+} 
+.calc_quiz_content {
+    background-color: var(--sec-color);
+    border-radius: 10px;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+h2 {
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+/* Quiz question */
+.qts_section {
+    display: flex;
+    height: 100vh; 
+    margin-top: 80px;
+    text-align: left;
+    background-color: var(--other-color);
+    flex: 1; /* This allows the content section to take up the remaining space */
+}
+#previousBtn {
+    width: 5rem;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid var(--black);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    background-color: var(--other-color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
+#nextBtn {
+    width: 5rem;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid var(--black);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    background-color: var(--other-color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
+.submit_quiz_btn {
+    width: 5rem;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid var(--black);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    background-color: var(--pry-color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: 350px;
+    margin-left: 350px;
+}
+
+/* Questions & Options */
+.qts {
+    color: var(--white);
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.qts_section {
+    display: flex;
+    flex-direction: column; /* Stack questions vertically */
+    gap: 20px; /* Space between questions */
+}
+/* Each question block */
+.question {
+    background-color: var(--other-color);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the radio options */
+ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+li {
+    margin: 5px 0;
+}
+label {
+    margin-left: 8px;
+    font-size: 16px;
+}
+.custom-radio {
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 24px;
+}
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.custom-radio input:checked ~ .checkmark {
+    background-color: var(--pry-color);
+}
+.custom-radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--pry-color);
+    border-radius: 50%;
+    background-color: var(--white);
+}
+.custom-radio input:checked ~ .checkmark:after {
+    display: block;
+    background-color: var(--pry-color);
+}
+.custom-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--pry-color);
+    transform: translate(-50%, -50%);
+}
+/* Ensure radio inputs are displayed vertically */
+.question ul {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Result styling */
+.user-answer {
+    font-weight: bold;
+}
+.correct-answer {
+    color: green;
+}
+.incorrect-answer {
+    color: red;
+}
+
+/* Time settings */
+.slider-container {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+}
+.slider {
+    width: 20rem;
+    appearance: none;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    appearance: none;
+}
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--other-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 20px;
+    background: var(--other-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.thumb-value {
+    position: absolute;
+    top: -25px; /* Adjust to position the value correctly above/below the slider */
+    left: 50%; /* Initial placement at the middle */
+    transform: translateX(-50%); /* Center the value horizontally */
+    background: var(--other-color);
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    pointer-events: none; /* Prevent interaction with the label */
+}
+
+/* Difficulty gauge */
+.difficulty-slider-container {
+    width: 300px;
+    margin: 20px;
+    position: relative;
+}
+.difficulty-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+.difficulty-slider {
+    width: 100%;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.difficulty-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.difficulty-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+/* Highlight the nodes */
+.difficulty-slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--other-color) 33%, var(--pry-color) 33%, #FFD700 66%, var(--black) 66%);
+}
+.difficulty-slider::-moz-range-track {
+    background: linear-gradient(to right, var(--other-color) 33%, var(--pry-color) 33%, #FFD700 66%, var(--black) 66%);
+}
+/* Align the labels with the slider positions */
+.difficulty-labels span {
+    width: 33.33%;
+    text-align: center;
+}
+/* Timer */
+.timer {
+    color: var(--white);
+    font-family: 'New Amsterdam';
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+/* Sign up form */
+.form {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+} 
+.form_content {
+    background-color: var(--other-color);
+    border-radius: 10px;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+h2 {
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.close_signup {
+    float: right;
+    font-size: 28px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--white);
+}
+label {
+    color: var(--white);
+    font-weight: 500;
+}
+input {
+    border: 0.5px solid var(--white);
+    border-radius: 7px;
+    background: transparent 50%;
+    width: 15rem;
+    color: var(--white);
+}
+.signup_submit_form {
+    width: 5rem;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid var(--black);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    background-color: var(--pry-color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
+.close_login {
+    float: right;
+    font-size: 28px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* Settings page */
+.logo_c {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'New Amsterdam';
+    color: var(--pry-color);
+    letter-spacing: 2px;
+    text-shadow: var(--txt-sh);
+    padding-right: 700px;
+}
+
+.begin_quiz {
+    width: 5rem;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid var(--black);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.119);
+    background-color: var(--pry-color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 15px;
+}
