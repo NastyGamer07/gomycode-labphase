@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculations</title>
+    <link rel="stylesheet" href="/Quizfinit - Phase 4/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="/Quizfinit - Phase 4/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Quizfinit - Phase 4/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Quizfinit - Phase 4/assets/images/favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo_c" style="text-decoration: none;">Quizfinit</a>
+        <div>
+            <nav class="navbar">
+                <a href="/Quizfinit - Phase 4/index.html" id="homeLink">Home</a>
+                <a href="#" id="dashboardcLink">Dashboards</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Quiz settings -->
+    <div id="calc_quiz_form" class="calc_quiz"> 
+        <div class="calc_quiz_content">
+            <h2 class="signup_header">Settings</h2>
+            <form id="calc_ulations">
+                <label for="atmpname" class="details">Attempt Name</label><br>
+                <input type="text" id="atmpname" name="atmpname" placeholder="Displays on scoreboards..."required><br><br>
+                
+                <label for="no_questions" class="details">Number of questions</label><br>
+                <input type="number" id="no_questions" min="5" max="20" required><br><br>
+                
+                <label class="slider-container">Time (minutes)
+                    <input type="range" min="1" max="30" value="10" id="gaugeSlider" class="slider" required>
+                    <span id="thumbValue" class="thumb-value">10</span>
+                </label><br><br>
+                
+                <label class="difficulty-slider-container">Difficulty
+                    <div class="difficulty-labels">
+                        <span class="difficulty-node" data-value="easy">Easy</span>
+                        <span class="difficulty-node" data-value="medium">Medium</span>
+                        <span class="difficulty-node" data-value="hard">Hard</span>
+                    </div>
+                    <input type="range" min="1" max="3" value="1" id="difficultySlider" class="difficulty-slider">
+                </label><br><br>
+                <button id="begin_quiz" class="begin_quiz" type="button">Begin</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/Quizfinit - Phase 4/modes/mathematical.js"></script>
+</body>
+</html>
